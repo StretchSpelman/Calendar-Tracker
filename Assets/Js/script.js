@@ -20,6 +20,13 @@ var userInput=$(this).siblings('.description').val();
     }
   });
 
+  $('.time-block').each(function() {
+    var timeBlockId = $(this).attr('id');
+    var userInput = localStorage.getItem(timeBlockId);
+    $(this).find('.description').val(userInput);
+  });
+
+
 
 
 });
